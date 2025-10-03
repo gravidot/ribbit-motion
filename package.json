@@ -1,0 +1,41 @@
+{
+  "name": "ribbit",
+  "version": "0.1.0",
+  "description": "Tiny animation primitives for React Native, Web, and Electron — powered by the Animated API.",
+  "license": "MIT",
+  "sideEffects": false,
+  "author": "howyoujini",
+  "type": "module",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "react-native": "dist/index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "react-native": "./dist/index.js",
+      "browser": "./dist/index.js",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [],
+  "peerDependencies": {
+    "react": ">=18",
+    "react-native": ">=0.75"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.0",
+    "@typescript-eslint/eslint-plugin": "^8.45.0",
+    "@typescript-eslint/parser": "^8.45.0",
+    "eslint": "^9.36.0",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.3"
+  }
+}
