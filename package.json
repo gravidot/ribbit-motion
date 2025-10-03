@@ -5,7 +5,16 @@
   "license": "MIT",
   "sideEffects": false,
   "author": "howyoujini",
+  "homepage": "https://github.com/gravidot/ribbit-motion#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gravidot/ribbit-motion.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gravidot/ribbit-motion/issues"
+  },
   "type": "module",
+  "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "react-native": "dist/index.js",
@@ -16,16 +25,42 @@
       "browser": "./dist/index.js",
       "import": "./dist/index.js",
       "default": "./dist/index.js"
-    }
+    },
+    "./package.json": "./package.json"
   },
   "files": [
-    "dist"
+    "dist",
+    "README.md",
+    "LICENSE"
   ],
   "scripts": {
     "build": "tsup",
-    "prepublishOnly": "npm run build"
+    "dev": "tsup --watch",
+    "clean": "rm -rf dist",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src --ext .ts,.tsx",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run build",
+    "prepack": "npm run build"
   },
-  "keywords": [],
+  "keywords": [
+    "motion",
+    "animation",
+    "interaction",
+    "react",
+    "react-native",
+    "electron",
+    "web",
+    "animated",
+    "primitives",
+    "ui",
+    "components"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "packageManager": "pnpm@9.0.0",
   "peerDependencies": {
     "react": ">=18",
     "react-native": ">=0.75"
