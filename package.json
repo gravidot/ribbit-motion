@@ -1,5 +1,5 @@
 {
-  "name": "ribbit",
+  "name": "ribbit-motion",
   "version": "0.1.0",
   "description": "Tiny animation primitives for React Native, Web, and Electron — powered by the Animated API.",
   "license": "MIT",
